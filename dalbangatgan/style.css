@@ -1,0 +1,55 @@
+body{
+    margin: 0px;
+}
+
+:root {
+    --brown: #56493F;
+    --yellow: #FFCA4B;
+    --white: #FFFFFF;
+}
+
+h2{
+    font-family: 'Neucha';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    /* 16px */
+    line-height: 120%;
+    letter-spacing: 1px;
+    color: var(--brown);
+}
+
+h3{
+    font-family: 'Neucha';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.825rem;
+    /* 14px */
+    line-height: 120%;
+    letter-spacing: 1px;
+    color: var(--brown);
+}
+
+h4{
+    font-family: 'NanumBarunpen';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.75rem; 
+    /* 12px */
+    line-height: 120%; 
+    /* or 14px */
+    color: var(--brown);
+}
+
+/* comment out once ready */
+.pre-size{
+    width: 150px;
+    height: 150px;
+    border-radius: 100px;
+}
+.menu-description{
+    display: none;
+}
+.link-to-video{
+    display: none;
+}
