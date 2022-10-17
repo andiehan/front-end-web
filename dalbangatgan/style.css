@@ -1,5 +1,8 @@
 body{
     margin: 0px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }
 
 :root {
@@ -52,4 +55,89 @@ h4{
 }
 .link-to-video{
     display: none;
+}
+
+
+@media (min-width: 64em) and (max-width: 120em) {
+    body{
+        background-color: #FBF8F4;
+    }
+
+    .hero-container{
+        width: 88vw;
+        margin: auto;
+        margin-top: 8vh;
+    }
+    
+    .hero-flex{
+        display: flex;
+    }
+    
+    .hero-left{
+        width: 800px;
+    }
+    
+    .hero-right{
+        width: 400px;
+    }
+
+    .links-area{
+        height: 40vh;
+        width: 70%;
+        margin-top: 10px;
+        border: solid;
+        /* comment out later */œ
+    }
+
+    
+    .scroll, .youtube, .blog, .instagram{
+        text-align: center;
+    }
+
+
+    .hero-content{
+        margin-top: 16px;
+    }
+
+    .text-logo{
+        margin-top: 18px;
+    }
+
+    .text-logo-subtitle{
+        display: inline;
+        position: relative;
+        bottom: 4px;
+        left: 4px;
+    }
+
+
+    .description-content{
+        margin-top: 40px;
+        width: 90%;
+    }
+
+    
+    /* waves */
+    
+
+
+    
+
+
+
+    
+
+    
+
+    
+
+
+
+
+
+
+
+
+
+
 }
