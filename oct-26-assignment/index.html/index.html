@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>in-class-assignment</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <button onclick="askforWord()">activate</button>
+
+    <script>
+        //in-class exercise
+        var words = [];
+        function askforWord() {
+            let word = ""; // variable initialization 
+            while (word !== "stop") {
+                word = prompt("Enter words");
+                if (word !== "stop") {
+                    words.push(word);
+                }
+            }
+            console.log(words);
+        }
+        //hw
+        //6-1
+        const dog = {
+            name: "Fang",
+            species: "boarhound dog",
+            size: "75"
+        };
+        console.log(`${dog.name} is a ${dog.species} dog measuring ${dog.size}`);
+        console.log(`Look, a cat! ${dog.name} barks: ${dog.bark()}`);
+        //6-2
+        const r = Number(prompt("Enter the circle radius:"));
+        // TODO: create the circle object here
+        const circle = {
+            radius: r,
+            circumference() {
+                return 2 * Math.PI * this.radius;
+            },
+            area() {
+                return Math.pow(this.radius, 2) * Math.PI;
+            },
+        };
+        console.log(`Its circumference is ${circle.circumference()}`);
+        console.log(`Its area is ${circle.area()}`);
+
+        //7-1
+        //Creates an array named musketeers containing values "Athos", "Porthos" and "Aramis".
+        // Shows each array element using a for loop.
+        // Adds the "D'Artagnan" value to the array.
+        // Shows each array element using the forEach() method.
+        // Remove poor Aramis.
+        // Shows each array element using a for-of loop.
+
+
+        var musketeers = ["Athos", "Porthos", "Aramis"];
+        for (let i = 0; i++; i < musketeers.length) {
+            console.log(musketeers[i]);
+        };
+        musketeers.push("D'Artagnan");
+        musketeers.forEach(element => {
+            console.log(element);
+        });
+        musketeers.splice(2, 1);
+        for (const element of musketeers) {
+            console.log(element);
+        }
+
+        //7-2 Write a program that creates the following array, then calculates and shows the array's maximum value.
+        const values = [3, 11, 7, 2, 9, 10];
+        values.sort(function (a, b) { return a - b });
+        console.log(values[0], values[values.length - 1]);
+
+        //8-1,2 Word info: Write a program that asks you for a word then shows its length, lowercase, and uppercase values.
+        //Improve the previous program so that it also shows the number of vowels inside the word
+        const analyzeword = prompt("Enter a word to analyze");
+        console.log(word.length);
+        console.log(word.toLowerCase());
+        console.log(word.toUpperCase());
+
+        let vowels = 0;
+        [...analyzeword].forEach(letter => {
+            const lowerLetter = letter.toLowerCase();
+            if (
+                lowerLetter === "a" ||
+                lowerLetter === "e" ||
+                lowerLetter === "i" ||
+                lowerLetter === "o" ||
+                lowerLetter === "u" ||
+                lowerLetter === "y"
+            ) {
+                vowelCount++;
+            }
+        });
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
