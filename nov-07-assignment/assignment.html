@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>random generator</title>
+</head>
+<body>
+    <img id= "dogImg" src="" alt="">
+    <button id ="random">random dog</button>
+    <script>
+    document.getElementById("random").addEventListener("click",getRandomDog)
+    function getRandomDog(){
+        fetch('https://dog.ceo/api/breeds/image/random')
+        .then(response=>response.json())
+        .then(data=>{
+            document.getElementById("dogImg").src = data.message;
+        })
+      }
+    </script>
+</body>
+</html>
