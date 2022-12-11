@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dead or alive</title>
+</head>
+
+<body>
+    <button id="bringRandom">bring a random character</button><br>
+    <img id="IMG" src="" alt="">
+    <br>
+    <button id="dead">Dead</button>
+    <button id="alive">Alive</button>
+    <script scr="script.js">
+        document.getElementById("bringRandom").addEventListener("click", fetchAPI);
+        document.getElementById("dead").addEventListener("click", deadEvalulate);
+        document.getElementById("alive").addEventListener("click", aliveEvalulate);
+        function fetchAPI() {
+            fetch(`https://rickandmortyapi.com/api/character/${Math.floor(Math.random() * 826)}`)
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById("IMG").src = data.image;
+                    console.log(data);
+                })
+        }
+    </script>
+</body>
+
+</html>
